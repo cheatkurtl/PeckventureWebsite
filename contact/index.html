@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peckventure</title>
+    <title>Peckventure - Kontakt</title>
     <style>
         * {
             margin: 0;
@@ -89,25 +89,6 @@
         main {
             padding-top: 4rem;
         }
-
-        /* Animierter Pfeil */
-        .scroll-arrow {
-            position: absolute;
-            bottom: 10%;
-            font-size: 2rem;
-            color: #333;
-            animation: bounce 1.5s infinite;
-            cursor: pointer;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(10px);
-            }
-        }
     </style>
 </head>
 <body>
@@ -118,31 +99,25 @@
 
     <!-- Hauptinhalt -->
     <main>
-        <section class="title" id="welcome-title">Willkommen bei Peckventure</section>
+        <section class="title" id="welcome-title">Kontakt</section>
         <div class="spacer"></div> <!-- Kleinerer Platzhalter für leichtes Scrollen -->
         <div class="content" id="main-content">
-            <p><strong>Peckventure</strong> ist ein entspannendes Open-World-Spiel, in dem du einen Specht steuerst und eine endlose, zufallsgenerierte Welt erkundest.</p>
-            <p>Als Spieler kannst du auf Bäume picken, um Insekten zu sammeln, oder auf dem Boden nach Nahrung suchen. Doch Vorsicht! Verschiedene Gefahren wie Luchse und Raubvögel könnten dein friedliches Erlebnis unterbrechen.</p>
-            <p><strong>Features:</strong></p>
+            <p>Du kannst uns gerne kontaktieren über:</p>
             <ul>
-                <li>Baue dein eigenes Nest aus gesammeltem Holz und errichte eine sichere Heimstatt für deine Eier.</li>
-                <li>Schütze deine Nachkommen vor Raubtieren wie Schlangen und sogar listigen Kuckucksküken, die versuchen könnten, ihre Eier gegen deine auszutauschen.</li>
-                <li>Verwende ein Inventar- und Gesundheitssystem, um Ressourcen zu sammeln und dein Überleben zu sichern.</li>
+                <li>Email: info@peckventure.com</li>
+                <li>Telefon: +43 123 456 789</li>
+                <li>Adresse: Vogelstraße 1, 1010 Wien, Österreich</li>
             </ul>
-            <p>Im <strong>Multiplayer-Modus</strong> kannst du dich mit anderen Spechten zusammentun oder in spannenden Wettkämpfen herausfinden, wer am schnellsten picken kann. Zusätzlich gibt es Anpassungsoptionen, um deinen Specht einzigartig zu gestalten.</p>
-            <p>Bereit, die Welt von Peckventure zu erkunden? Pick like never before!</p>
+            <p>Wir freuen uns auf deine Nachricht!</p>
         </div>
     </main>
 
-    <!-- Animierter Pfeil -->
-    <div class="scroll-arrow">⬇</div>
-
     <!-- Fußzeile -->
     <footer>
-        <p><a href="impressum.html">Impressum</a></p>
-        <p><a href="privacy.html">Datenschutz</a></p>
-        <p><a href="cookies.html">Cookies</a></p>
-        <p><a href="terms.html">Nutzungsbedingungen</a></p>
+        <p><a href="../home/impressum.html">Impressum</a></p>
+        <p><a href="../home/privacy.html">Datenschutz</a></p>
+        <p><a href="../home/cookies.html">Cookies</a></p>
+        <p><a href="../home/terms.html">Nutzungsbedingungen</a></p>
         <p>© 2024 Peckventure</p>
     </footer>
 
@@ -157,8 +132,8 @@
                 faq: "FAQ",
                 history: "History",
                 newsletter: "Newsletter",
-                welcome: "Welcome to Peckventure",
-                content: "Peckventure is a relaxing game where you control a woodpecker, explore an endless world, and gather insects."
+                welcome: "Contact",
+                content: "Feel free to contact us through:"
             },
             de: {
                 home: "Startseite",
@@ -168,8 +143,8 @@
                 faq: "FAQ",
                 history: "Geschichte",
                 newsletter: "Newsletter",
-                welcome: "Willkommen bei Peckventure",
-                content: "Peckventure ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt voller Insekten und Bäume erkundest."
+                welcome: "Kontakt",
+                content: "Du kannst uns gerne kontaktieren über:"
             }
         };
 
@@ -181,7 +156,7 @@
         const navItems = ["home", "about", "contact", "donate", "faq", "history", "newsletter"];
         navItems.forEach(item => {
             const link = document.createElement("a");
-            link.href = `${item}.html`;
+            link.href = `../${item}/index.html`;
             link.textContent = translations[userLang][item];
             navbar.appendChild(link);
         });
