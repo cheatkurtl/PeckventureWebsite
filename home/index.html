@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peckventure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 120px;
+            opacity: 1;
+        }
+
+        /* Unsichtbarer Inhalt, der beim Scrollen erscheinen soll */
+        .spacer {
+            height: 100vh; /* Platz für das Scrollen */
+        }
+
+        .content {
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        /* Sichtbar, wenn die Klasse 'visible' hinzugefügt wird */
+        .content.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        main {
+            padding-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigationsleiste -->
+    <nav id="navbar">
+        <!-- Links werden durch JavaScript hinzugefügt -->
+    </nav>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <section class="title" id="welcome-title">Willkommen bei Peckventure</section>
+        <div class="spacer"></div> <!-- Platzhalter für Scrollen -->
+        <div class="content" id="main-content">
+            <p>Peckventure ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt voller Insekten und Bäume erkundest.</p>
+        </div>
+    </main>
+
+    <script>
+        // Sprachdaten für Navigation und Inhalt
+        const translations = {
+            en: {
+                home: "Home",
+                about: "About",
+                contact: "Contact",
+                donate: "Donate",
+                faq: "FAQ",
+                history: "History",
+                newsletter: "Newsletter",
+                legal: "Legal",
+                welcome: "Welcome to Peckventure",
+                content: "Peckventure is a relaxing game where you control a woodpecker, explore an endless world, and gather insects."
+            },
+            de: {
+                home: "Startseite",
+                about: "Über Peckventure",
+                contact: "Kontakt",
+                donate: "Spenden",
+                faq: "FAQ",
+                history: "Geschichte",
+                newsletter: "Newsletter",
+                legal: "Rechtliches",
+                welcome: "Willkommen bei Peckventure",
+                content: "Peckventure ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt voller Insekten und Bäume erkundest."
+            }
+        };
+
+        // Systemsprache erkennen
+        const userLang = navigator.language.startsWith("de") ? "de" : "en";
+
+        // Navigationsleiste dynamisch generieren
+        const navbar = document.getElementById("navbar");
+        const navItems = ["home", "about", "contact", "donate", "faq", "history", "newsletter", "legal"];
+        navItems.forEach(item => {
+            const link = document.createElement("a");
+            link.href = `${item}.html`;
+            link.textContent = translations[userLang][item];
+            navbar.appendChild(link);
+        });
+
+        // Hauptinhalt übersetzen
+        document.getElementById("welcome-title").textContent = translations[userLang].welcome;
+        document.getElementById("main-content").querySelector("p").textContent = translations[userLang].content;
+
+        // Scroll-Effekt für den Hauptinhalt
+        const content = document.getElementById("main-content");
+        window.addEventListener("scroll", () => {
+            const revealPoint = content.getBoundingClientRect().top;
+            if (revealPoint < window.innerHeight - 50) { // Prüft, ob der Inhalt in den sichtbaren Bereich scrollt
+                content.classList.add("visible");
+            }
+        });
+    </script>
+</body>
+</html>
