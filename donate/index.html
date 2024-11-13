@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spenden - Peckventure</title>
+    <link rel="icon" href="../icon/favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            background-color: #f3f7fa;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-top: 6rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 100px;
+            padding: 1rem;
+        }
+
+        .donate-content {
+            padding: 2rem;
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .donate-content h2 {
+            color: #0056b3;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .donate-content p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .donation-options {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .donation-options button {
+            padding: 0.8rem 1.2rem;
+            border: 2px solid #0056b3;
+            background-color: #fff;
+            color: #0056b3;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .donation-options button:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .custom-amount {
+            margin-bottom: 1.5rem;
+        }
+
+        .custom-amount input {
+            padding: 0.8rem;
+            width: 100%;
+            max-width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .donate-button {
+            padding: 1rem 2rem;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: #218838;
+        }
+
+        footer {
+            background-color: #f3f3f3;
+            padding: 1rem;
+            text-align: center;
+            color: #555;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            display: inline-block;
+            margin: 0 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../home/index.html">Startseite</a>
+        <a href="../about/index.html">Über Peckventure</a>
+        <a href="../contact/index.html">Kontakt</a>
+        <a href="index.html">Spenden</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="../history.html">Geschichte</a>
+        <a href="../newsletter/index.html">Newsletter</a>
+    </nav>
+
+    <main>
+        <section class="title">Spenden</section>
+        <div class="donate-content">
+            <h2>Unterstütze Peckventure</h2>
+            <p>Wir freuen uns über jede Unterstützung! Deine Spende hilft uns, Peckventure weiterzuentwickeln und noch mehr spannende Features zu integrieren. Wähle einfach einen Betrag oder gebe einen eigenen Spendenbetrag ein.</p>
+
+            <div class="donation-options">
+                <button onclick="setAmount(5)">5€</button>
+                <button onclick="setAmount(10)">10€</button>
+                <button onclick="setAmount(20)">20€</button>
+                <button onclick="setAmount(50)">50€</button>
+            </div>
+
+            <div class="custom-amount">
+                <input type="number" id="customAmount" placeholder="Eigener Betrag (€)" min="1">
+            </div>
+
+            <button class="donate-button" onclick="donate()">Jetzt spenden</button>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="../impressum.html">Impressum</a></p>
+        <p><a href="../privacy.html">Datenschutz</a></p>
+        <p><a href="../cookies.html">Cookies</a></p>
+        <p><a href="../terms.html">Nutzungsbedingungen</a></p>
+        <p><a href="../about/index.html">Über Peckventure</a></p>
+        <p><a href="index.html">Spenden</a></p>
+        <p><a href="../newsletter/index.html">Newsletter</a></p>
+        <p>© 2024 Peckventure</p>
+    </footer>
+
+    <script>
+        let donationAmount = 0;
+
+        function setAmount(amount) {
+            donationAmount = amount;
+            document.getElementById("customAmount").value = "";
+        }
+
+        function donate() {
+            const customAmount = document.getElementById("customAmount").value;
+            donationAmount = customAmount ? parseFloat(customAmount) : donationAmount;
+
+            if (donationAmount && donationAmount > 0) {
+                alert(`Vielen Dank für deine Spende von ${donationAmount}€!`);
+                // Hier könnte der Code für die tatsächliche Zahlungsabwicklung eingefügt werden
+            } else {
+                alert("Bitte wähle einen Betrag oder gib einen eigenen Betrag ein.");
+            }
+        }
+    </script>
+</body>
+</html>

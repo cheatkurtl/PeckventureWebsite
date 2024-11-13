@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Peckventure</title>
+    <link rel="icon" href="../icon/favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+            background-color: #f3f7fa;
+            color: #333;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ddd;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-top: 6rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: #333;
+            margin-top: 100px;
+            padding: 1rem;
+        }
+
+        .about-content {
+            padding: 2rem;
+            width: 90%;
+            max-width: 700px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+
+        .about-content h2 {
+            color: #0056b3;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .team-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .team-list li {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-left: 5px solid #0056b3;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-list li strong {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .role {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 0.2rem;
+        }
+
+        .description {
+            margin-top: 0.5rem;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #f3f3f3;
+            padding: 1rem;
+            text-align: center;
+            color: #555;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            display: inline-block;
+            margin: 0 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <a href="../home/index.html">Startseite</a>
+        <a href="index.html">Über Peckventure</a>
+        <a href="../contact/index.html">Kontakt</a>
+        <a href="../donate/index.html">Spenden</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="../history.html">Geschichte</a>
+        <a href="../newsletter/index.html">Newsletter</a>
+    </nav>
+
+    <main>
+        <section class="title">Über Peckventure</section>
+        <div class="about-content">
+            <h2>Wer wir sind</h2>
+            <p>Peckventure wird von einem engagierten Team aus vier Personen entwickelt, die jeweils eine einzigartige Rolle in diesem Projekt übernehmen.</p>
+            <ul class="team-list">
+                <li>
+                    <strong>Andreas Goldbrunner</strong> <span class="role">- Projektleitung</span>
+                    <p class="description">Verantwortlich für die Organisation und Leitung des gesamten Projekts, sorgt für einen reibungslosen Ablauf und die Erreichung unserer Ziele.</p>
+                </li>
+                <li>
+                    <strong>Leopold Maier</strong> <span class="role">- Head Developer</span>
+                    <p class="description">Der Hauptentwickler des Projekts, der die technische Umsetzung und Entwicklung der Spielelemente leitet.</p>
+                </li>
+                <li>
+                    <strong>Lukas Hamburger</strong> <span class="role">- Head Designer</span>
+                    <p class="description">Zuständig für das visuelle Design und die Ästhetik, sorgt dafür, dass das Spiel ansprechend und intuitiv gestaltet ist.</p>
+                </li>
+                <li>
+                    <strong>Jason Kalus</strong> <span class="role">- Server Manager</span>
+                    <p class="description">Verwaltet die Serverinfrastruktur, damit das Spiel jederzeit stabil läuft und den Spielern ein nahtloses Erlebnis bietet.</p>
+                </li>
+            </ul>
+            <p>Gemeinsam arbeiten wir daran, Peckventure zu einem einzigartigen Open-World-Erlebnis zu machen und freuen uns darauf, es mit euch zu teilen!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="../impressum.html">Impressum</a></p>
+        <p><a href="../privacy.html">Datenschutz</a></p>
+        <p><a href="../cookies.html">Cookies</a></p>
+        <p><a href="../terms.html">Nutzungsbedingungen</a></p>
+        <p><a href="../newsletter/index.html">Newsletter</a></p>
+        <p>© 2024 Peckventure</p>
+    </footer>
+</body>
+</html>

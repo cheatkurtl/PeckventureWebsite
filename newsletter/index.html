@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Peckventure</title>
+    <title>Newsletter - Peckventure</title>
     <style>
         * {
             margin: 0;
@@ -60,7 +60,7 @@
             padding: 1rem;
         }
 
-        .contact-form {
+        .newsletter-form {
             padding: 2rem;
             width: 90%;
             max-width: 600px;
@@ -70,17 +70,17 @@
             text-align: center;
         }
 
-        .contact-form h2 {
+        .newsletter-form h2 {
             margin-bottom: 1.5rem;
         }
 
-        .contact-form label {
+        .newsletter-form label {
             display: block;
             margin: 0.5rem 0 0.2rem;
             text-align: left;
         }
 
-        .contact-form input, .contact-form textarea {
+        .newsletter-form input[type="email"] {
             width: 100%;
             padding: 0.8rem;
             margin-bottom: 1rem;
@@ -88,7 +88,7 @@
             border-radius: 4px;
         }
 
-        .contact-form button {
+        .newsletter-form button {
             padding: 0.8rem 1.5rem;
             border: none;
             background-color: #333;
@@ -98,7 +98,7 @@
             border-radius: 4px;
         }
 
-        .contact-form button:hover {
+        .newsletter-form button:hover {
             background-color: #555;
         }
 
@@ -121,29 +121,24 @@
 <body>
     <nav id="navbar">
         <a href="../home/index.html">Startseite</a>
-        <a href=".../about/index.html">Über Peckventure</a>
-        <a href="index.html">Kontakt</a>
+        <a href="../about/index.html">Über Peckventure</a>
+        <a href="../contact/index.html">Kontakt</a>
         <a href="../donate/index.html">Spenden</a>
         <a href="../faq/index.html">FAQ</a>
         <a href="../history.html">Geschichte</a>
-        <a href="../newsletter/index.html">Newsletter</a>
+        <a href="index.html">Newsletter</a>
     </nav>
 
     <main>
-        <section class="title">Kontakt</section>
-        <div class="contact-form">
-            <h2>Kontaktiere uns</h2>
-            <form action="submit_form.html" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <section class="title">Newsletter</section>
+        <div class="newsletter-form">
+            <h2>Abonniere unseren Newsletter</h2>
+            <p>Erhalte regelmäßig Neuigkeiten und Updates rund um Peckventure direkt in deinen Posteingang.</p>
+            <form action="newsletter_signup.php" method="POST">
+                <label for="email">E-Mail-Adresse:</label>
+                <input type="email" id="email" name="email" required placeholder="Deine E-Mail-Adresse">
 
-                <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Nachricht</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Senden</button>
+                <button type="submit">Anmelden</button>
             </form>
         </div>
     </main>
