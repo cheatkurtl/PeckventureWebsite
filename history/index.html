@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geschichte - Peckventure</title>
-    <link rel="icon" href="../icon/favicon.png" type="image/png">
+    <title>Kontakt - Peckventure</title>
     <style>
         * {
             margin: 0;
@@ -19,7 +18,6 @@
             flex-direction: column;
             min-height: 100vh;
             align-items: center;
-            background-color: #f3f7fa;
         }
 
         nav {
@@ -52,37 +50,56 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding-top: 6rem;
+            padding-top: 4rem;
         }
 
         .title {
             font-size: 2rem;
-            color: #333;
-            margin-top: 100px;
+            text-align: center;
+            margin-top: 120px;
             padding: 1rem;
         }
 
-        .history-content {
+        .contact-form {
             padding: 2rem;
             width: 90%;
             max-width: 600px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
             text-align: center;
         }
 
-        .history-content h2 {
-            color: #0056b3;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+        .contact-form h2 {
+            margin-bottom: 1.5rem;
         }
 
-        .history-content p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
+        .contact-form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+            text-align: left;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
         }
 
         footer {
@@ -102,36 +119,61 @@
     </style>
 </head>
 <body>
-    <nav id="navbar">
-        <a href="../home/index.html">Startseite</a>
-        <a href="../about/index.html">Über Peckventure</a>
-        <a href="../contact/index.html">Kontakt</a>
-        <a href="../donate/index.html">Spenden</a>
-        <a href="../faq/index.html">FAQ</a>
-        <a href="index.html">Geschichte</a>
-        <a href="../newsletter/index.html">Newsletter</a>
-    </nav>
+<nav id="navbar">
+    <a href="../home/index.html">Startseite</a>
+    <a href="../about/index.html">Über Peckventure</a>
+    <a href="index.html">Kontakt</a>
+    <a href="../donate/index.html">Spenden</a>
+    <a href="../faq/index.html">FAQ</a>
+    <a href="../history/index.html">Geschichte</a>
+    <a href="../newsletter/index.html">Newsletter</a>
+</nav>
 
-    <main>
-        <section class="title">Geschichte</section>
-        <div class="history-content">
-            <h2>Die Entstehung von Peckventure</h2>
-            <p>Anfangs war es nur eine Aufgabe in der Schule, einen Plan für ein Online-Spiel zu erstellen, ohne tatsächlich etwas zu entwickeln. Doch die Idee ließ uns nicht mehr los und hat uns inspiriert.</p>
-            <p>Heute arbeiten wir daran, aus diesem Konzept ein echtes Spiel zu machen. Aus einem Schulprojekt ist Peckventure entstanden – ein Open-World-Erlebnis, das Spieler dazu einlädt, die Welt durch die Augen eines Spechtes zu erkunden.</p>
-            <p>Unser Team ist stolz darauf, diesen Traum Realität werden zu lassen, und wir freuen uns darauf, das Spiel mit euch zu teilen!</p>
-        </div>
-    </main>
+<main>
+    <section class="title">Kontakt</section>
+    <div class="contact-form">
+        <h2>Kontaktiere uns</h2>
+        <form action="send_email.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
 
-    <footer>
-        <p><a href="../impressum.html">Impressum</a></p>
-        <p><a href="../privacy.html">Datenschutz</a></p>
-        <p><a href="../cookies.html">Cookies</a></p>
-        <p><a href="../terms.html">Nutzungsbedingungen</a></p>
-        <p><a href="../about/index.html">Über Peckventure</a></p>
-        <p><a href="../donate/index.html">Spenden</a></p>
-        <p><a href="index.html">Geschichte</a></p>
-        <p><a href="../newsletter/index.html">Newsletter</a></p>
-        <p>© 2024 Peckventure</p>
-    </footer>
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p><a href="../impressum.html">Impressum</a></p>
+    <p><a href="../privacy.html">Datenschutz</a></p>
+    <p><a href="../cookies.html">Cookies</a></p>
+    <p><a href="../terms.html">Nutzungsbedingungen</a></p>
+    <p>© 2024 Peckventure</p>
+</footer>
 </body>
 </html>
+
+<!-- send_email.php -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    $to = "ABC@gmail.com";
+    $subject = "Neue Nachricht von der Kontaktseite";
+    $body = "Name: $name\nE-Mail: $email\nNachricht:\n$message";
+    $headers = "From: $email\r\n";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "<script>alert('Nachricht erfolgreich gesendet.'); window.location.href = 'index.html';</script>";
+} else {
+echo "<script>alert('Fehler beim Senden der Nachricht. Bitte versuche es erneut.'); window.location.href = 'index.html';</script>";
+}
+}
+?>

@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peckventure</title>
+
     <!-- PNG-Icon hinzufügen -->
     <link rel="icon" href="../icon/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Lato', Arial, sans-serif;
         }
 
         body {
@@ -19,6 +26,9 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            font-size: 16px;
+            color: #333;
+            background-color: #f3f3f3;
         }
 
         nav {
@@ -47,7 +57,7 @@
         .title {
             font-size: 2.5rem;
             text-align: center;
-            margin-top: 120px;
+            margin-top: 10px;
             opacity: 1;
             display: flex;
             align-items: center;
@@ -59,16 +69,51 @@
             height: 50vh;
         }
 
-        .content {
+        .content-box {
+            max-width: 800px;
+            margin: auto;
             padding: 2rem;
-            opacity: 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transform: translateY(30px);
             transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            opacity: 0;
         }
 
-        .content.visible {
+        .content-box.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        h1, h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
         }
 
         main {
@@ -112,109 +157,11 @@
     </style>
 </head>
 <body>
-    <nav id="navbar">
-        <!-- Links werden durch JavaScript hinzugefügt -->
-    </nav>
+<nav id="navbar">
+    <!-- Links werden durch JavaScript hinzugefügt -->
+</nav>
 
-    <main>
-        <section class="title" id="welcome-title">Willkommen bei Peckventure</section>
-        <div class="spacer"></div>
-        <div class="content" id="main-content">
-            <p><strong>Peckventure</strong> ist ein entspannendes Open-World-Spiel, in dem du einen Specht steuerst und eine endlose, zufallsgenerierte Welt erkundest.</p>
-            <p>Als Spieler kannst du auf Bäume picken, um Insekten zu sammeln, oder auf dem Boden nach Nahrung suchen. Doch Vorsicht! Verschiedene Gefahren wie Luchse und Raubvögel könnten dein friedliches Erlebnis unterbrechen.</p>
-            <p><strong>Features:</strong></p>
-            <ul>
-                <li>Baue dein eigenes Nest aus gesammeltem Holz und errichte eine sichere Heimstatt für deine Eier.</li>
-                <li>Schütze deine Nachkommen vor Raubtieren wie Schlangen und sogar listigen Kuckucksküken, die versuchen könnten, ihre Eier gegen deine auszutauschen.</li>
-                <li>Verwende ein Inventar- und Gesundheitssystem, um Ressourcen zu sammeln und dein Überleben zu sichern.</li>
-            </ul>
-            <p>Im <strong>Multiplayer-Modus</strong> kannst du dich mit anderen Spechten zusammentun oder in spannenden Wettkämpfen herausfinden, wer am schnellsten picken kann. Zusätzlich gibt es Anpassungsoptionen, um deinen Specht einzigartig zu gestalten.</p>
-            <p>Bereit, die Welt von Peckventure zu erkunden? Pick like never before!</p>
-        </div>
-    </main>
-
-    <div class="scroll-arrow">⬇</div>
-
-    <footer>
-        <p><a href="../impressum.html">Impressum</a></p>
-        <p><a href="../privacy.html">Datenschutz</a></p>
-        <p><a href="../cookies.html">Cookies</a></p>
-        <p><a href="../terms.html">Nutzungsbedingungen</a></p>
-        <p><a href="../about/index.html">Über Peckventure</a></p>
-        <p><a href="../donate/index.html">Spenden</a></p>
-        <p><a href="../history/index.html">Geschichte</a></p>
-        <p><a href="../newsletter/index.html">Newsletter</a></p>
-        <p>© 2024 Peckventure</p>
-    </footer>
-
-    <script>
-        const translations = {
-            en: {
-                home: "Home",
-                about: "About",
-                contact: "Contact",
-                donate: "Donate",
-                faq: "FAQ",
-                history: "History",
-                newsletter: "Newsletter",
-                welcome: "Welcome to Peckventure",
-                content: "Peckventure is a relaxing game where you control a woodpecker, explore an endless world, and gather insects."
-            },
-            de: {
-                home: "Startseite",
-                about: "Über Peckventure",
-                contact: "Kontakt",
-                donate: "Spenden",
-                faq: "FAQ",
-                history: "Geschichte",
-                newsletter: "Newsletter",
-                welcome: "Willkommen bei Peckventure",
-                content: "Peckventure ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt voller Insekten und Bäume erkundest."
-            }
-        };
-
-        const userLang = navigator.language.startsWith("de") ? "de" : "en";
-
-        const navbar = document.getElementById("navbar");
-        const navItems = ["home", "about", "contact", "donate", "faq", "history", "newsletter"];
-        navItems.forEach(item => {
-            const link = document.createElement("a");
-
-            if (item === "home") {
-                link.href = "index.html"; // Verweist auf den "home"-Ordner
-            } else if (item === "about") {
-                link.href = "../about/index.html"; // Verweist auf die Über-Seite
-            } else if (item === "contact") {
-                link.href = "../contact/index.html"; // Zurück zum übergeordneten Ordner und dann in contact
-            } else if (item === "faq") {
-                link.href = "../faq/index.html"; // Zurück zum übergeordneten Ordner und dann in faq
-            } else if (item === "donate") {
-                link.href = "../donate/index.html"; // Verweist auf den Spenden-Ordner
-            } else if (item === "history") {
-                link.href = "../history/index.html"; // Verweist auf die Geschichte-Seite
-            } else if (item === "newsletter") {
-                link.href = "../newsletter/index.html"; // Verweist auf den Newsletter-Ordner
-            } else {
-                link.href = `../${item}.html`;
-            }
-
-            link.textContent = translations[userLang][item];
-            navbar.appendChild(link);
-        });
-
-        document.getElementById("welcome-title").textContent = translations[userLang].welcome;
-        document.getElementById("main-content").querySelector("p").textContent = translations[userLang].content;
-
-        const content = document.getElementById("main-content");
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-
-            if (scrollY > 50) {
-                content.classList.add("visible");
-            } else {
-                content.classList.remove("visible");
-            }
-        });
-    </script>
-</body>
-</html>
+<main>
+    <section class="title" id="welcome-title">Willkommen bei Peckventure</section>
+    <div class="spacer"></div>
+    <div class="content-box" id="main-content">
