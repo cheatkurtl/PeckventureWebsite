@@ -57,7 +57,7 @@
         .title {
             font-size: 2.5rem;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 120px;
             opacity: 1;
             display: flex;
             align-items: center;
@@ -165,3 +165,102 @@
     <section class="title" id="welcome-title">Willkommen bei Peckventure</section>
     <div class="spacer"></div>
     <div class="content-box" id="main-content">
+        <p><strong>Peckventure</strong> ist ein entspannendes Open-World-Spiel, in dem du einen Specht steuerst und eine endlose, zufallsgenerierte Welt erkundest.</p>
+        <p>Als Spieler kannst du auf Bäume picken, um Insekten zu sammeln, oder auf dem Boden nach Nahrung suchen. Doch Vorsicht! Verschiedene Gefahren wie Luchse und Raubvögel könnten dein friedliches Erlebnis unterbrechen.</p>
+        <h2>Features</h2>
+        <ul>
+            <li>Baue dein eigenes Nest aus gesammeltem Holz und errichte eine sichere Heimstatt für deine Eier.</li>
+            <li>Schütze deine Nachkommen vor Raubtieren wie Schlangen und sogar listigen Kuckucksküken, die versuchen könnten, ihre Eier gegen deine auszutauschen.</li>
+            <li>Verwende ein Inventar- und Gesundheitssystem, um Ressourcen zu sammeln und dein Überleben zu sichern.</li>
+        </ul>
+        <h2>Multiplayer-Modus</h2>
+        <p>Du kannst dich mit anderen Spechten zusammentun oder in spannenden Wettkämpfen herausfinden, wer am schnellsten picken kann. Zusätzlich gibt es Anpassungsoptionen, um deinen Specht einzigartig zu gestalten.</p>
+        <p>Bereit, die Welt von Peckventure zu erkunden? Pick like never before!</p>
+    </div>
+</main>
+
+<div class="scroll-arrow">⬇</div>
+
+<footer>
+    <p><a href="../impressum.html">Impressum</a></p>
+    <p><a href="../privacy.html">Datenschutz</a></p>
+    <p><a href="../cookies.html">Cookies</a></p>
+    <p><a href="../terms.html">Nutzungsbedingungen</a></p>
+    <p><a href="../about/index.html">Über Peckventure</a></p>
+    <p><a href="../donate/index.html">Spenden</a></p>
+    <p><a href="../history/index.html">Geschichte</a></p>
+    <p><a href="../newsletter/index.html">Newsletter</a></p>
+    <p>© 2024 Peckventure</p>
+</footer>
+
+<script>
+    const translations = {
+        en: {
+            home: "Home",
+            about: "About",
+            contact: "Contact",
+            donate: "Donate",
+            faq: "FAQ",
+            history: "History",
+            newsletter: "Newsletter",
+            welcome: "Welcome to Peckventure",
+            content: "Peckventure is a relaxing game where you control a woodpecker, explore an endless world, and gather insects."
+        },
+        de: {
+            home: "Startseite",
+            about: "Über Peckventure",
+            contact: "Kontakt",
+            donate: "Spenden",
+            faq: "FAQ",
+            history: "Geschichte",
+            newsletter: "Newsletter",
+            welcome: "Willkommen bei Peckventure",
+            content: "Peckventure ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt voller Insekten und Bäume erkundest."
+        }
+    };
+
+    const userLang = navigator.language.startsWith("de") ? "de" : "en";
+
+    const navbar = document.getElementById("navbar");
+    const navItems = ["home", "about", "contact", "donate", "faq", "history", "newsletter"];
+    navItems.forEach(item => {
+        const link = document.createElement("a");
+
+        if (item === "home") {
+            link.href = "index.html"; // Verweist auf den "home"-Ordner
+        } else if (item === "about") {
+            link.href = "../about/index.html"; // Verweist auf die Über-Seite
+        } else if (item === "contact") {
+            link.href = "../contact/index.html"; // Zurück zum übergeordneten Ordner und dann in contact
+        } else if (item === "faq") {
+            link.href = "../faq/index.html"; // Zurück zum übergeordneten Ordner und dann in faq
+        } else if (item === "donate") {
+            link.href = "../donate/index.html"; // Verweist auf den Spenden-Ordner
+        } else if (item === "history") {
+            link.href = "../history/index.html"; // Verweist auf die Geschichte-Seite
+        } else if (item === "newsletter") {
+            link.href = "../newsletter/index.html"; // Verweist auf den Newsletter-Ordner
+        } else {
+            link.href = `../${item}.html`;
+        }
+
+        link.textContent = translations[userLang][item];
+        navbar.appendChild(link);
+    });
+
+    document.getElementById("welcome-title").textContent = translations[userLang].welcome;
+    document.getElementById("main-content").querySelector("p").textContent = translations[userLang].content;
+
+    const contentBox = document.getElementById("main-content");
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+
+        if (scrollY > 50) {
+            contentBox.classList.add("visible");
+        } else {
+            contentBox.classList.remove("visible");
+        }
+    });
+</script>
+</body>
+</html>
