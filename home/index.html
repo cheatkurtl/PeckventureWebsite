@@ -38,8 +38,9 @@
             background-color: #333;
             color: #fff;
             display: flex;
-            justify-content: center;
-            padding: 1rem 0;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
             z-index: 1000;
         }
 
@@ -52,6 +53,15 @@
 
         nav a:hover {
             color: #ddd;
+        }
+
+        .language-selector {
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #333;
+            padding: 0.5rem;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         .title {
@@ -159,6 +169,23 @@
 <body>
 <nav id="navbar">
     <!-- Links werden durch JavaScript hinzugefügt -->
+    <div>
+        <a href="index.html">Startseite</a>
+        <a href="../about/index.html">Über Peckventure</a>
+        <a href="../contact/index.html">Kontakt</a>
+    </div>
+    <select id="language-selector" class="language-selector">
+        <option value="en">English</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="zh">中文 (Chinese)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="hi">हिंदी (Hindi)</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="ja">日本語 (Japanese)</option>
+    </select>
 </nav>
 
 <main>
@@ -186,10 +213,6 @@
     <p><a href="../privacy.html">Datenschutz</a></p>
     <p><a href="../cookies.html">Cookies</a></p>
     <p><a href="../terms.html">Nutzungsbedingungen</a></p>
-    <p><a href="../about/index.html">Über Peckventure</a></p>
-    <p><a href="../donate/index.html">Spenden</a></p>
-    <p><a href="../history/index.html">Geschichte</a></p>
-    <p><a href="../newsletter/index.html">Newsletter</a></p>
     <p>© 2024 Peckventure</p>
 </footer>
 
@@ -216,40 +239,144 @@
             newsletter: "Newsletter",
             welcome: "Willkommen bei Peckventure",
             content: "Peckventure ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt voller Insekten und Bäume erkundest."
+        },
+        es: {
+            home: "Inicio",
+            about: "Acerca de",
+            contact: "Contacto",
+            donate: "Donar",
+            faq: "Preguntas frecuentes",
+            history: "Historia",
+            newsletter: "Boletín",
+            welcome: "Bienvenido a Peckventure",
+            content: "Peckventure es un juego relajante donde controlas un pájaro carpintero, exploras un mundo interminable y recolectas insectos."
+        },
+        fr: {
+            home: "Accueil",
+            about: "À propos",
+            contact: "Contact",
+            donate: "Faire un don",
+            faq: "FAQ",
+            history: "Histoire",
+            newsletter: "Bulletin",
+            welcome: "Bienvenue à Peckventure",
+            content: "Peckventure est un jeu relaxant où vous contrôlez un pic, explorez un monde sans fin et récoltez des insectes."
+        },
+        zh: {
+            home: "主页",
+            about: "关于",
+            contact: "联系",
+            donate: "捐赠",
+            faq: "常见问题",
+            history: "历史",
+            newsletter: "新闻通讯",
+            welcome: "欢迎来到Peckventure",
+            content: "Peckventure是一款放松的游戏，您可以控制一只啄木鸟，探索无尽的世界并收集昆虫。"
+        },
+        ar: {
+            home: "الرئيسية",
+            about: "حول",
+            contact: "اتصل",
+            donate: "تبرع",
+            faq: "الأسئلة الشائعة",
+            history: "التاريخ",
+            newsletter: "النشرة الإخبارية",
+            welcome: "مرحبًا بك في Peckventure",
+            content: "Peckventure هي لعبة استرخاء حيث تتحكم في نقار الخشب وتستكشف عالمًا لا نهاية له وتجمع الحشرات."
+        },
+        hi: {
+            home: "मुख्य पृष्ठ",
+            about: "परिचय",
+            contact: "संपर्क",
+            donate: "दान करें",
+            faq: "सामान्य प्रश्न",
+            history: "इतिहास",
+            newsletter: "न्यूज़लेटर",
+            welcome: "Peckventure में आपका स्वागत है",
+            content: "Peckventure एक आरामदायक खेल है जिसमें आप एक कठफोड़वा को नियंत्रित करते हैं, अनंत दुनिया की खोज करते हैं और कीड़े इकट्ठा करते हैं।"
+        },
+        pt: {
+            home: "Início",
+            about: "Sobre",
+            contact: "Contato",
+            donate: "Doar",
+            faq: "Perguntas frequentes",
+            history: "História",
+            newsletter: "Boletim informativo",
+            welcome: "Bem-vindo ao Peckventure",
+            content: "Peckventure é um jogo relaxante onde você controla um pica-pau, explora um mundo infinito e coleta insetos."
+        },
+        ru: {
+            home: "Главная",
+            about: "О нас",
+            contact: "Контакт",
+            donate: "Пожертвовать",
+            faq: "Часто задаваемые вопросы",
+            history: "История",
+            newsletter: "Новостная рассылка",
+            welcome: "Добро пожаловать в Peckventure",
+            content: "Peckventure - это расслабляющая игра, в которой вы управляете дятлом, исследуете бесконечный мир и собираете насекомых."
+        },
+        ja: {
+            home: "ホーム",
+            about: "概要",
+            contact: "お問い合わせ",
+            donate: "寄付する",
+            faq: "よくある質問",
+            history: "歴史",
+            newsletter: "ニュースレター",
+            welcome: "Peckventureへようこそ",
+            content: "Peckventureはリラックスできるゲームで、あなたはキツツキを操作し、終わりのない世界を探索し、昆虫を集めます。"
         }
     };
 
     const userLang = navigator.language.startsWith("de") ? "de" : "en";
+    let selectedLang = userLang;
 
-    const navbar = document.getElementById("navbar");
-    const navItems = ["home", "about", "contact", "donate", "faq", "history", "newsletter"];
-    navItems.forEach(item => {
-        const link = document.createElement("a");
+    function updateLanguage(lang) {
+        selectedLang = lang;
+        const navbar = document.getElementById("navbar");
+        const linksContainer = navbar.querySelector('div');
+        linksContainer.innerHTML = "";
+        const navItems = ["home", "about", "contact", "donate", "faq", "history", "newsletter"];
+        navItems.forEach(item => {
+            const link = document.createElement("a");
 
-        if (item === "home") {
-            link.href = "index.html"; // Verweist auf den "home"-Ordner
-        } else if (item === "about") {
-            link.href = "../about/index.html"; // Verweist auf die Über-Seite
-        } else if (item === "contact") {
-            link.href = "../contact/index.html"; // Zurück zum übergeordneten Ordner und dann in contact
-        } else if (item === "faq") {
-            link.href = "../faq/index.html"; // Zurück zum übergeordneten Ordner und dann in faq
-        } else if (item === "donate") {
-            link.href = "../donate/index.html"; // Verweist auf den Spenden-Ordner
-        } else if (item === "history") {
-            link.href = "../history/index.html"; // Verweist auf die Geschichte-Seite
-        } else if (item === "newsletter") {
-            link.href = "../newsletter/index.html"; // Verweist auf den Newsletter-Ordner
-        } else {
-            link.href = `../${item}.html`;
-        }
+            if (item === "home") {
+                link.href = "index.html"; // Verweist auf den "home"-Ordner
+            } else if (item === "about") {
+                link.href = "../about/index.html"; // Verweist auf die Über-Seite
+            } else if (item === "contact") {
+                link.href = "../contact/index.html"; // Zurück zum übergeordneten Ordner und dann in contact
+            } else if (item === "faq") {
+                link.href = "../faq/index.html"; // Zurück zum übergeordneten Ordner und dann in faq
+            } else if (item === "donate") {
+                link.href = "../donate/index.html"; // Verweist auf den Spenden-Ordner
+            } else if (item === "history") {
+                link.href = "../history/index.html"; // Verweist auf die Geschichte-Seite
+            } else if (item === "newsletter") {
+                link.href = "../newsletter/index.html"; // Verweist auf den Newsletter-Ordner
+            } else {
+                link.href = `../${item}.html`;
+            }
 
-        link.textContent = translations[userLang][item];
-        navbar.appendChild(link);
+            link.textContent = translations[lang][item];
+            linksContainer.appendChild(link);
+        });
+
+        document.getElementById("welcome-title").textContent = translations[lang].welcome;
+        document.getElementById("main-content").querySelector("p").textContent = translations[lang].content;
+    }
+
+    document.getElementById("language-selector").addEventListener("change", (event) => {
+        updateLanguage(event.target.value);
     });
 
-    document.getElementById("welcome-title").textContent = translations[userLang].welcome;
-    document.getElementById("main-content").querySelector("p").textContent = translations[userLang].content;
+    // Setze die Standardsprache beim Laden der Seite
+    window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("language-selector").value = userLang;
+        updateLanguage(userLang);
+    });
 
     const contentBox = document.getElementById("main-content");
     window.addEventListener("scroll", () => {
