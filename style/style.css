@@ -1,0 +1,160 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+/* Body styles */
+body {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+    color: #333;
+    background-color: #f3f3f3;
+}
+
+/* Navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+.language-selector {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Title section */
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 120px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+}
+
+/* Spacer */
+.spacer {
+    height: 50vh;
+}
+
+/* Content box */
+.content-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 0;
+}
+
+.content-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Text styles */
+h1, h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Main content */
+main {
+    padding-top: 4rem;
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #f3f3f3;
+    padding: 1rem;
+    text-align: center;
+    color: #555;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+/* Scroll arrow animation */
+.scroll-arrow {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #333;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
