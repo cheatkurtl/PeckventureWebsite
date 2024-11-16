@@ -3,148 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Peckventure</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            align-items: center;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            padding: 1rem 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #ddd;
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding-top: 4rem;
-        }
-
-        .title {
-            font-size: 2rem;
-            text-align: center;
-            margin-top: 120px;
-            padding: 1rem;
-        }
-
-        .contact-form {
-            padding: 2rem;
-            width: 90%;
-            max-width: 600px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .contact-form h2 {
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-form label {
-            display: block;
-            margin: 0.5rem 0 0.2rem;
-            text-align: left;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .contact-form button {
-            padding: 0.8rem 1.5rem;
-            border: none;
-            background-color: #333;
-            color: #fff;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .contact-form button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            background-color: #f3f3f3;
-            padding: 1rem;
-            text-align: center;
-            color: #555;
-            width: 100%;
-            margin-top: auto;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            display: inline-block;
-            margin: 0 1rem;
-        }
-    </style>
+    <title>Geschichte - Peckventure</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../icon/favicon.png" type="image/png">
 </head>
 <body>
 <nav id="navbar">
-    <a href="../home/index.html">Startseite</a>
-    <a href="../about/index.html">Über Peckventure</a>
-    <a href="index.html">Kontakt</a>
-    <a href="../donate/index.html">Spenden</a>
-    <a href="../faq/index.html">FAQ</a>
-    <a href="../history/index.html">Geschichte</a>
-    <a href="../newsletter/index.html">Newsletter</a>
+    <div>
+        <a href="../home/index.html">Startseite</a>
+        <a href="../about/index.html">Über Peckventure</a>
+        <a href="../contact/index.html">Kontakt</a>
+        <a href="../donate/index.html">Spenden</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="index.html">Geschichte</a>
+        <a href="../newsletter/index.html">Newsletter</a>
+    </div>
+    <select id="language-selector" class="language-selector">
+        <option value="en">English</option>
+        <option value="de" selected>Deutsch</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="zh">中文 (Chinese)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="hi">हिंदी (Hindi)</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="ja">日本語 (Japanese)</option>
+    </select>
 </nav>
 
 <main>
-    <section class="title">Kontakt</section>
-    <div class="contact-form">
-        <h2>Kontaktiere uns</h2>
-        <form action="send_email.php" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">E-Mail</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Nachricht</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Senden</button>
-        </form>
+    <section class="title">Unsere Geschichte</section>
+    <div class="content-box history-box">
+        <h2>Wie alles begann</h2>
+        <p>Angefangen hat es mit einem Schulprojekt, in dem wir ein Konzept für ein Open-World-Spiel entwickelt haben. Was zunächst nur eine Idee war, wurde schnell zu einem ambitionierten Ziel, das wir in die Realität umsetzen wollten.</p>
+        <p>Mit der Zeit haben wir das Konzept erweitert, ein engagiertes Team aufgebaut und die Vision von <strong>Peckventure</strong> geformt. Heute arbeiten wir daran, unser Spiel für alle zugänglich zu machen und ein einzigartiges Spielerlebnis zu bieten.</p>
+        <p>Wir sind stolz darauf, dass unser Projekt von einer Idee zu einem echten Produkt herangewachsen ist, und danken allen, die uns auf diesem Weg unterstützt haben.</p>
     </div>
 </main>
 
@@ -157,23 +51,3 @@
 </footer>
 </body>
 </html>
-
-<!-- send_email.php -->
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-    $to = "ABC@gmail.com";
-    $subject = "Neue Nachricht von der Kontaktseite";
-    $body = "Name: $name\nE-Mail: $email\nNachricht:\n$message";
-    $headers = "From: $email\r\n";
-
-    if (mail($to, $subject, $body, $headers)) {
-        echo "<script>alert('Nachricht erfolgreich gesendet.'); window.location.href = 'index.html';</script>";
-} else {
-echo "<script>alert('Fehler beim Senden der Nachricht. Bitte versuche es erneut.'); window.location.href = 'index.html';</script>";
-}
-}
-?>

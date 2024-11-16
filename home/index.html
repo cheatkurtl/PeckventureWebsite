@@ -4,179 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peckventure</title>
-
-    <!-- PNG-Icon hinzufügen -->
-    <link rel="icon" href="../icon/favicon.png" type="image/png">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Lato', Arial, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-size: 16px;
-            color: #333;
-            background-color: #f3f3f3;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #ddd;
-        }
-
-        .language-selector {
-            color: #333;
-            background-color: #fff;
-            border: 1px solid #333;
-            padding: 0.5rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-top: 120px;
-            opacity: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 60vh;
-        }
-
-        .spacer {
-            height: 50vh;
-        }
-
-        .content-box {
-            max-width: 800px;
-            margin: auto;
-            padding: 2rem;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transform: translateY(30px);
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-            opacity: 0;
-        }
-
-        .content-box.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        h1, h2 {
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin-left: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        main {
-            padding-top: 4rem;
-            flex: 1;
-        }
-
-        footer {
-            background-color: #f3f3f3;
-            padding: 1rem;
-            text-align: center;
-            color: #555;
-            width: 100%;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            display: inline-block;
-            margin: 0 1rem;
-        }
-
-        .scroll-arrow {
-            position: fixed;
-            bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2rem;
-            color: #333;
-            animation: bounce 1.5s infinite;
-            cursor: pointer;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(10px);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
 <nav id="navbar">
-    <!-- Links werden durch JavaScript hinzugefügt -->
     <div>
         <a href="index.html">Startseite</a>
         <a href="../about/index.html">Über Peckventure</a>
         <a href="../contact/index.html">Kontakt</a>
+        <a href="../donate/index.html">Spenden</a>
+        <a href="../faq/index.html">FAQ</a>
+        <a href="../history/index.html">Geschichte</a>
+        <a href="../newsletter/index.html">Newsletter</a>
     </div>
     <select id="language-selector" class="language-selector">
         <option value="en">English</option>
-        <option value="de">Deutsch</option>
+        <option value="de" selected>Deutsch</option>
         <option value="es">Español</option>
         <option value="fr">Français</option>
         <option value="zh">中文 (Chinese)</option>
@@ -189,24 +32,22 @@
 </nav>
 
 <main>
-    <section class="title" id="welcome-title">Willkommen bei Peckventure</section>
-    <div class="spacer"></div>
+    <section class="title">Willkommen bei Peckventure</section>
     <div class="content-box" id="main-content">
-        <p><strong>Peckventure</strong> ist ein entspannendes Open-World-Spiel, in dem du einen Specht steuerst und eine endlose, zufallsgenerierte Welt erkundest.</p>
-        <p>Als Spieler kannst du auf Bäume picken, um Insekten zu sammeln, oder auf dem Boden nach Nahrung suchen. Doch Vorsicht! Verschiedene Gefahren wie Luchse und Raubvögel könnten dein friedliches Erlebnis unterbrechen.</p>
+        <h2>Über Peckventure</h2>
+        <p><strong>Peckventure</strong> ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt erkundest.</p>
+        <p>Du kannst Bäume picken, Insekten sammeln und dich vor Raubvögeln schützen.</p>
         <h2>Features</h2>
         <ul>
-            <li>Baue dein eigenes Nest aus gesammeltem Holz und errichte eine sichere Heimstatt für deine Eier.</li>
-            <li>Schütze deine Nachkommen vor Raubtieren wie Schlangen und sogar listigen Kuckucksküken, die versuchen könnten, ihre Eier gegen deine auszutauschen.</li>
-            <li>Verwende ein Inventar- und Gesundheitssystem, um Ressourcen zu sammeln und dein Überleben zu sichern.</li>
+            <li>Baue dein eigenes Nest aus gesammeltem Holz.</li>
+            <li>Schütze deine Nachkommen vor Raubtieren.</li>
+            <li>Verwende ein Inventar- und Gesundheitssystem.</li>
         </ul>
         <h2>Multiplayer-Modus</h2>
-        <p>Du kannst dich mit anderen Spechten zusammentun oder in spannenden Wettkämpfen herausfinden, wer am schnellsten picken kann. Zusätzlich gibt es Anpassungsoptionen, um deinen Specht einzigartig zu gestalten.</p>
-        <p>Bereit, die Welt von Peckventure zu erkunden? Peck like never before!</p>
+        <p>Spiele mit anderen und gestalte deinen Specht individuell.</p>
+        <p>Bereit für das Abenteuer? <strong>Peck like never before!</strong></p>
     </div>
 </main>
-
-<div class="scroll-arrow">⬇</div>
 
 <footer>
     <p><a href="../impressum.html">Impressum</a></p>
@@ -217,175 +58,15 @@
 </footer>
 
 <script>
-    const translations = {
-        en: {
-            home: "Home",
-            about: "About",
-            contact: "Contact",
-            donate: "Donate",
-            faq: "FAQ",
-            history: "History",
-            newsletter: "Newsletter",
-            welcome: "Welcome to Peckventure",
-            content: "Peckventure is a relaxing game where you control a woodpecker, explore an endless world, and gather insects."
-        },
-        de: {
-            home: "Startseite",
-            about: "Über Peckventure",
-            contact: "Kontakt",
-            donate: "Spenden",
-            faq: "FAQ",
-            history: "Geschichte",
-            newsletter: "Newsletter",
-            welcome: "Willkommen bei Peckventure",
-            content: "Peckventure ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt voller Insekten und Bäume erkundest."
-        },
-        es: {
-            home: "Inicio",
-            about: "Acerca de",
-            contact: "Contacto",
-            donate: "Donar",
-            faq: "Preguntas frecuentes",
-            history: "Historia",
-            newsletter: "Boletín",
-            welcome: "Bienvenido a Peckventure",
-            content: "Peckventure es un juego relajante donde controlas un pájaro carpintero, exploras un mundo interminable y recolectas insectos."
-        },
-        fr: {
-            home: "Accueil",
-            about: "À propos",
-            contact: "Contact",
-            donate: "Faire un don",
-            faq: "FAQ",
-            history: "Histoire",
-            newsletter: "Bulletin",
-            welcome: "Bienvenue à Peckventure",
-            content: "Peckventure est un jeu relaxant où vous contrôlez un pic, explorez un monde sans fin et récoltez des insectes."
-        },
-        zh: {
-            home: "主页",
-            about: "关于",
-            contact: "联系",
-            donate: "捐赠",
-            faq: "常见问题",
-            history: "历史",
-            newsletter: "新闻通讯",
-            welcome: "欢迎来到Peckventure",
-            content: "Peckventure是一款放松的游戏，您可以控制一只啄木鸟，探索无尽的世界并收集昆虫。"
-        },
-        ar: {
-            home: "الرئيسية",
-            about: "حول",
-            contact: "اتصل",
-            donate: "تبرع",
-            faq: "الأسئلة الشائعة",
-            history: "التاريخ",
-            newsletter: "النشرة الإخبارية",
-            welcome: "مرحبًا بك في Peckventure",
-            content: "Peckventure هي لعبة استرخاء حيث تتحكم في نقار الخشب وتستكشف عالمًا لا نهاية له وتجمع الحشرات."
-        },
-        hi: {
-            home: "मुख्य पृष्ठ",
-            about: "परिचय",
-            contact: "संपर्क",
-            donate: "दान करें",
-            faq: "सामान्य प्रश्न",
-            history: "इतिहास",
-            newsletter: "न्यूज़लेटर",
-            welcome: "Peckventure में आपका स्वागत है",
-            content: "Peckventure एक आरामदायक खेल है जिसमें आप एक कठफोड़वा को नियंत्रित करते हैं, अनंत दुनिया की खोज करते हैं और कीड़े इकट्ठा करते हैं।"
-        },
-        pt: {
-            home: "Início",
-            about: "Sobre",
-            contact: "Contato",
-            donate: "Doar",
-            faq: "Perguntas frequentes",
-            history: "História",
-            newsletter: "Boletim informativo",
-            welcome: "Bem-vindo ao Peckventure",
-            content: "Peckventure é um jogo relaxante onde você controla um pica-pau, explora um mundo infinito e coleta insetos."
-        },
-        ru: {
-            home: "Главная",
-            about: "О нас",
-            contact: "Контакт",
-            donate: "Пожертвовать",
-            faq: "Часто задаваемые вопросы",
-            history: "История",
-            newsletter: "Новостная рассылка",
-            welcome: "Добро пожаловать в Peckventure",
-            content: "Peckventure - это расслабляющая игра, в которой вы управляете дятлом, исследуете бесконечный мир и собираете насекомых."
-        },
-        ja: {
-            home: "ホーム",
-            about: "概要",
-            contact: "お問い合わせ",
-            donate: "寄付する",
-            faq: "よくある質問",
-            history: "歴史",
-            newsletter: "ニュースレター",
-            welcome: "Peckventureへようこそ",
-            content: "Peckventureはリラックスできるゲームで、あなたはキツツキを操作し、終わりのない世界を探索し、昆虫を集めます。"
-        }
-    };
+    const mainContent = document.getElementById("main-content");
 
-    const userLang = navigator.language.startsWith("de") ? "de" : "en";
-    let selectedLang = userLang;
-
-    function updateLanguage(lang) {
-        selectedLang = lang;
-        const navbar = document.getElementById("navbar");
-        const linksContainer = navbar.querySelector('div');
-        linksContainer.innerHTML = "";
-        const navItems = ["home", "about", "contact", "donate", "faq", "history", "newsletter"];
-        navItems.forEach(item => {
-            const link = document.createElement("a");
-
-            if (item === "home") {
-                link.href = "index.html"; // Verweist auf den "home"-Ordner
-            } else if (item === "about") {
-                link.href = "../about/index.html"; // Verweist auf die Über-Seite
-            } else if (item === "contact") {
-                link.href = "../contact/index.html"; // Zurück zum übergeordneten Ordner und dann in contact
-            } else if (item === "faq") {
-                link.href = "../faq/index.html"; // Zurück zum übergeordneten Ordner und dann in faq
-            } else if (item === "donate") {
-                link.href = "../donate/index.html"; // Verweist auf den Spenden-Ordner
-            } else if (item === "history") {
-                link.href = "../history/index.html"; // Verweist auf die Geschichte-Seite
-            } else if (item === "newsletter") {
-                link.href = "../newsletter/index.html"; // Verweist auf den Newsletter-Ordner
-            } else {
-                link.href = `../${item}.html`;
-            }
-
-            link.textContent = translations[lang][item];
-            linksContainer.appendChild(link);
-        });
-
-        document.getElementById("welcome-title").textContent = translations[lang].welcome;
-        document.getElementById("main-content").querySelector("p").textContent = translations[lang].content;
-    }
-
-    document.getElementById("language-selector").addEventListener("change", (event) => {
-        updateLanguage(event.target.value);
-    });
-
-    // Setze die Standardsprache beim Laden der Seite
-    window.addEventListener("DOMContentLoaded", () => {
-        document.getElementById("language-selector").value = userLang;
-        updateLanguage(userLang);
-    });
-
-    const contentBox = document.getElementById("main-content");
     window.addEventListener("scroll", () => {
-        const scrollY = window.scrollY;
+        const scrollPosition = window.scrollY;
 
-        if (scrollY > 50) {
-            contentBox.classList.add("visible");
+        if (scrollPosition > 100) {
+            mainContent.classList.add("visible");
         } else {
-            contentBox.classList.remove("visible");
+            mainContent.classList.remove("visible");
         }
     });
 </script>

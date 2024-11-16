@@ -4,90 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Peckventure</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            align-items: center;
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            padding: 1rem 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #ddd;
-        }
-
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding-top: 4rem;
-        }
-
-        .title {
-            font-size: 2rem;
-            text-align: center;
-            margin-top: 120px;
-            padding: 1rem;
-        }
-
-        .faq-content {
-            padding: 2rem;
-            width: 90%;
-            max-width: 600px;
-            background: #f9f9f9;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        footer {
-            background-color: #f3f3f3;
-            padding: 1rem;
-            text-align: center;
-            color: #555;
-            width: 100%;
-            margin-top: auto;
-        }
-
-        footer p {
-            margin: 0.5rem 0;
-            display: inline-block;
-            margin: 0 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
-    <nav id="navbar">
+<nav id="navbar">
+    <div>
         <a href="../home/index.html">Startseite</a>
         <a href="../about/index.html">Über Peckventure</a>
         <a href="../contact/index.html">Kontakt</a>
@@ -95,36 +16,59 @@
         <a href="index.html">FAQ</a>
         <a href="../history/index.html">Geschichte</a>
         <a href="../newsletter/index.html">Newsletter</a>
-    </nav>
+    </div>
+    <select id="language-selector" class="language-selector">
+        <option value="en">English</option>
+        <option value="de" selected>Deutsch</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="zh">中文 (Chinese)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="hi">हिंदी (Hindi)</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="ja">日本語 (Japanese)</option>
+    </select>
+</nav>
 
-    <main>
-        <section class="title">FAQ</section>
-        <div class="faq-content">
-            <h2>Häufig gestellte Fragen</h2>
+<main>
+    <section class="title">FAQ</section>
+    <div class="content-box faq-box">
+        <h2>Häufig gestellte Fragen</h2>
 
+        <div class="faq-item">
             <h3>Was ist Peckventure?</h3>
             <p>Peckventure ist ein entspannendes Open-World-Spiel, in dem du einen Specht steuerst und eine endlose, zufallsgenerierte Welt erkundest.</p>
+        </div>
 
+        <div class="faq-item">
             <h3>Wie kann ich das Spiel herunterladen?</h3>
             <p>Das Spiel wird derzeit entwickelt und ist bald zum Download verfügbar. Halte unsere Website für Neuigkeiten im Auge!</p>
+        </div>
 
+        <div class="faq-item">
             <h3>Ist Peckventure kostenlos?</h3>
             <p>Ja, das Basisspiel wird kostenlos sein. Es könnte optionale, kostenpflichtige Erweiterungen geben.</p>
+        </div>
 
+        <div class="faq-item">
             <h3>Wie kann ich das Spiel unterstützen?</h3>
             <p>Unterstützung ist jederzeit willkommen! Besuche unsere <a href="../donate/index.html">Spenden-Seite</a> für mehr Informationen.</p>
+        </div>
 
+        <div class="faq-item">
             <h3>Kann ich Peckventure im Multiplayer-Modus spielen?</h3>
             <p>Ja, es gibt einen Multiplayer-Modus, in dem du mit anderen Spielern zusammenarbeiten oder konkurrieren kannst.</p>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer>
-        <p><a href="../impressum.html">Impressum</a></p>
-        <p><a href="../privacy.html">Datenschutz</a></p>
-        <p><a href="../cookies.html">Cookies</a></p>
-        <p><a href="../terms.html">Nutzungsbedingungen</a></p>
-        <p>© 2024 Peckventure</p>
-    </footer>
+<footer>
+    <p><a href="../impressum.html">Impressum</a></p>
+    <p><a href="../privacy.html">Datenschutz</a></p>
+    <p><a href="../cookies.html">Cookies</a></p>
+    <p><a href="../terms.html">Nutzungsbedingungen</a></p>
+    <p>© 2024 Peckventure</p>
+</footer>
 </body>
 </html>
