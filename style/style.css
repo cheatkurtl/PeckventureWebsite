@@ -47,7 +47,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #e74c3c;
+    color: #6591ff;
 }
 
 .language-selector {
@@ -65,8 +65,8 @@ nav a:hover {
 
 .language-selector:hover,
 .language-selector:focus {
-    background-color: #e74c3c;
-    color: #fff;
+    background-color: #6591ff;
+    color: #ffffff;
 }
 
 /* Main Content */
@@ -287,7 +287,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #e74c3c;
+    color: #6591ff;
 }
 
 /* Responsive Anpassungen */
@@ -587,7 +587,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #e74c3c;
+    color: #6591ff;
 }
 
 /* Main Content */
