@@ -5,70 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peckventure</title>
     <link rel="stylesheet" href="../../style/style.css">
-    <style type="text/css">
-    .arrow {}
-    </style>
 </head>
 <body>
 <nav id="navbar">
     <div>
-        <a href="home.html">Startseite</a>
-        <a href="../about/about.html">Über Peckventure</a>
-        <a href="../contact/contact.html">Kontakt</a>
-        <a href="../donate/donate.html">Spenden</a>
+        <a href="../home/home.html">
+            <span data-lang="de" style="display:none;">Startseite</span>
+            <span data-lang="en" style="display:none;">Home</span>
+        </a>
+        <a href="../about/about.html">
+            <span data-lang="de" style="display:none;">Über Peckventure</span>
+            <span data-lang="en" style="display:none;">About Peckventure</span>
+        </a>
+        <a href="../contact/contact.html">
+            <span data-lang="de" style="display:none;">Kontakt</span>
+            <span data-lang="en" style="display:none;">Contact</span>
+        </a>
+        <a href="../donate/donate.html">
+            <span data-lang="de" style="display:none;">Spenden</span>
+            <span data-lang="en" style="display:none;">Donate</span>
+        </a>
         <a href="../faq/faq.html">FAQ</a>
-        <a href="../history/history.html">Geschichte</a>
-        <a href="../newsletter/newsletter.html">Newsletter</a>
+        <a href="../history/history.html">
+            <span data-lang="de" style="display:none;">Geschichte</span>
+            <span data-lang="en" style="display:none;">History</span>
+        </a>
+        <a href="newsletter.html">Newsletter</a>
     </div>
     <select id="language-selector" class="language-selector">
-        <option value="en">English</option>
         <option value="de" selected>Deutsch</option>
+        <option value="en">English</option>
     </select>
 </nav>
 
 <main>
     <section class="welcome-section">
-      
-      Willkommen bei Peckventure
-      <div class="arrow-down">
-        <p>&nbsp;</p>
-</div>
+        <h1>
+            <span data-lang="de">Willkommen bei Peckventure</span>
+            <span data-lang="en" style="display:none;">Welcome to Peckventure</span>
+        </h1>
     </section>
-  <p class="arrow"><strong class="arrow">⬇</strong></p>
-    <div class="content-box hidden" id="main-content">
-      <h2>Über Peckventure</h2>
-      <p><strong>Peckventure</strong> ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt erkundest.</p>
-      <p>Du kannst Bäume picken, Insekten sammeln und dich vor Raubvögeln schützen.</p>
-      <h2>Features</h2>
-        <li>Baue dein eigenes Nest aus gesammeltem Holz.</li>
-        <li>Schütze deine Nachkommen vor Raubtieren.</li>
-        <li>Verwende ein Inventar- und Gesundheitssystem.</li>
-      <h2>Multiplayer-Modus</h2>
-      <p>Spiele mit anderen und gestalte deinen Specht individuell.</p>
-      <p>Bereit für das Abenteuer? <strong>Peck like never before!</strong></p>
+    <div class="content-box">
+        <h2>
+            <span data-lang="de">Über Peckventure</span>
+            <span data-lang="en" style="display:none;">About Peckventure</span>
+        </h2>
+        <p>
+            <span data-lang="de">Peckventure ist ein entspannendes Spiel, in dem du einen Specht steuerst und eine endlose Welt erkundest.</span>
+            <span data-lang="en" style="display:none;">Peckventure is a relaxing game where you control a woodpecker and explore an endless world.</span>
+        </p>
     </div>
 </main>
 
 <footer>
-  <p>&nbsp;</p>
     <p>&nbsp;</p>
-<p><a href="../../footer/terms/index.html">Nutzungsbedingungen</a><a href="../privacy.html">Datenschutz</a><a href="../impressum.html">Impressum</a><a href="../cookies.html">Cookies</a></p>
+    <p>&nbsp;</p>
+    <p>
+        <a href="../../footer/terms/terms.html">
+            <span data-lang="de">Nutzungsbedingungen</span>
+            <span data-lang="en" style="display:none;">Terms of Use</span>
+        </a>
+        <a href="../../footer/privacy/privacy.html">
+            <span data-lang="de">Datenschutz</span>
+            <span data-lang="en" style="display:none;">Privacy Policy</span>
+        </a>
+        <a href="../../footer/impressum/impressum.html">
+            <span data-lang="de">Impressum</span>
+            <span data-lang="en" style="display:none;">Imprint</span>
+        </a>
+        <a href="../../footer/cookies/cookies.html">
+            <span data-lang="de">Cookies</span>
+            <span data-lang="en" style="display:none;">Cookies</span>
+        </a>
+    </p>
     <p>&nbsp;</p>
     <p>© 2024 Peckventure</p>
 </footer>
 
-<script>
-    const mainContent = document.getElementById("main-content");
-
-    window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;
-
-        if (scrollPosition > 100) {
-            mainContent.classList.remove("hidden");
-        } else {
-            mainContent.classList.add("hidden");
-        }
-    });
-</script>
+<script src="../../Script/language_switcher.js"></script>
 </body>
 </html>

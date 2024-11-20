@@ -9,47 +9,75 @@
 <body>
 <nav id="navbar">
     <div>
-        <a href="../home/home.html">Startseite</a>
-        <a href="../about/about.html">Über Peckventure</a>
-        <a href="contact.html">Kontakt</a>
-        <a href="../donate/donate.html">Spenden</a>
+        <a href="../home/home.html">
+            <span data-lang="de" style="display:none;">Startseite</span>
+            <span data-lang="en" style="display:none;">Home</span>
+        </a>
+        <a href="../about/about.html">
+            <span data-lang="de" style="display:none;">Über Peckventure</span>
+            <span data-lang="en" style="display:none;">About Peckventure</span>
+        </a>
+        <a href="../contact/contact.html">
+            <span data-lang="de" style="display:none;">Kontakt</span>
+            <span data-lang="en" style="display:none;">Contact</span>
+        </a>
+        <a href="../donate/donate.html">
+            <span data-lang="de" style="display:none;">Spenden</span>
+            <span data-lang="en" style="display:none;">Donate</span>
+        </a>
         <a href="../faq/faq.html">FAQ</a>
-        <a href="../history/history.html">Geschichte</a>
-        <a href="../newsletter/newsletter.html">Newsletter</a>
+        <a href="../history/history.html">
+            <span data-lang="de" style="display:none;">Geschichte</span>
+            <span data-lang="en" style="display:none;">History</span>
+        </a>
+        <a href="newsletter.html">Newsletter</a>
     </div>
     <select id="language-selector" class="language-selector">
-        <option value="en">English</option>
         <option value="de" selected>Deutsch</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-        <option value="zh">中文 (Chinese)</option>
-        <option value="ar">العربية (Arabic)</option>
-        <option value="hi">हिंदी (Hindi)</option>
-        <option value="pt">Português</option>
-        <option value="ru">Русский (Russian)</option>
-        <option value="ja">日本語 (Japanese)</option>
+        <option value="en">English</option>
     </select>
 </nav>
 
 <main>
-    <section class="title">Kontakt</section>
+    <section class="title">
+        <span data-lang="de">Kontakt</span>
+        <span data-lang="en" style="display:none;">Contact</span>
+    </section>
     <div class="content-box contact-box">
-        <h2>Kontaktiere uns</h2>
-        <p>Wir freuen uns über deine Nachricht. Bitte fülle das untenstehende Formular aus, und wir melden uns bei dir!</p>
+        <h2>
+            <span data-lang="de">Kontaktiere uns</span>
+            <span data-lang="en" style="display:none;">Contact Us</span>
+        </h2>
+        <p>
+            <span data-lang="de">Wir freuen uns über deine Nachricht. Bitte fülle das untenstehende Formular aus, und wir melden uns bei dir!</span>
+            <span data-lang="en" style="display:none;">We look forward to your message. Please fill out the form below, and we will get back to you!</span>
+        </p>
         <form action="send_email.php" method="POST" class="contact-form">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">
+                    <span data-lang="de">Name</span>
+                    <span data-lang="en" style="display:none;">Name</span>
+                </label>
                 <input type="text" id="name" name="name" placeholder="Dein Name" required>
             </div>
             <div class="form-group">
-                <label for="email">E-Mail</label>
+                <label for="email">
+                    <span data-lang="de">E-Mail</span>
+                    <span data-lang="en" style="display:none;">Email</span>
+                </label>
                 <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse" required>
             </div>
             <div class="form-group">
-                <label for="message">Nachricht</label>
+                <label for="message">
+                    <span data-lang="de">Nachricht</span>
+                    <span data-lang="en" style="display:none;">Message</span>
+                </label>
                 <textarea id="message" name="message" rows="5" placeholder="Deine Nachricht..." required></textarea>
             </div>
-            <button type="submit" class="contact-button">Nachricht senden</button>
+            <button type="submit" class="contact-button">
+                <span data-lang="de">Nachricht senden</span>
+                <span data-lang="en" style="display:none;">Send Message</span>
+            </button>
         </form>
     </div>
 </main>
@@ -57,9 +85,28 @@
 <footer>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p><a href="../terms.html">Nutzungsbedingungen</a><a href="../privacy.html">Datenschutz</a><a href="../impressum.html">Impressum</a><a href="../cookies.html">Cookies</a></p>
+    <p>
+        <a href="../../footer/terms/terms.html">
+            <span data-lang="de">Nutzungsbedingungen</span>
+            <span data-lang="en" style="display:none;">Terms of Use</span>
+        </a>
+        <a href="../../footer/privacy/privacy.html">
+            <span data-lang="de">Datenschutz</span>
+            <span data-lang="en" style="display:none;">Privacy Policy</span>
+        </a>
+        <a href="../../footer/impressum/impressum.html">
+            <span data-lang="de">Impressum</span>
+            <span data-lang="en" style="display:none;">Imprint</span>
+        </a>
+        <a href="../../footer/cookies/cookies.html">
+            <span data-lang="de">Cookies</span>
+            <span data-lang="en" style="display:none;">Cookies</span>
+        </a>
+    </p>
     <p>&nbsp;</p>
     <p>© 2024 Peckventure</p>
 </footer>
+
+<script src="../../Script/language_switcher.js"></script>
 </body>
 </html>
