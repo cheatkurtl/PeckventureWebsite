@@ -58,7 +58,10 @@
                     <span data-lang="de">E-Mail-Adresse:</span>
                     <span data-lang="en" style="display:none;">Email Address:</span>
                 </label>
-                <input type="email" id="email" name="email" required placeholder="Deine E-Mail-Adresse">
+                <input type="email" id="email" name="email" required 
+                       placeholder="Deine E-Mail-Adresse" 
+                       data-placeholder-de="Deine E-Mail-Adresse" 
+                       data-placeholder-en="Your email address">
             </div>
             <button type="submit" class="submit-button">
                 <span data-lang="de">Anmelden</span>
@@ -91,5 +94,15 @@
 </footer>
 
 <script src="../../Script/language_switcher.js"></script>
+<script>
+    // Language switcher to update placeholders
+    document.getElementById('language-selector').addEventListener('change', function() {
+        const selectedLang = this.value;
+        document.querySelectorAll('input').forEach(input => {
+            const placeholder = input.getAttribute(`data-placeholder-${selectedLang}`);
+            if (placeholder) input.placeholder = placeholder;
+        });
+    });
+</script>
 </body>
 </html>

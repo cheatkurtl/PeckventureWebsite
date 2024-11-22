@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const languageSelector = document.getElementById("language-selector");
     const supportedLanguages = ["en", "de"];
-    const defaultLanguage = "de";
+    const defaultLanguage = "en";
 
     // Function to translate the page based on the selected language
     function translatePage(lang) {
