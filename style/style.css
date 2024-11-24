@@ -1,3 +1,4 @@
+
 /* Reset styles */
 * {
     margin: 0;
@@ -683,4 +684,61 @@ footer {
 
 .cta-button:hover {
     background-color: #45a049;
+}
+
+
+/* Enhanced Responsiveness Adjustments */
+@media (max-width: 1024px) {
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .content-box {
+        padding: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav a {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .content-box {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 0.5rem;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        padding: 0.3rem;
+    }
+
+    .content-box {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }
